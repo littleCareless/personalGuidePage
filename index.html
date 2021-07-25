@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="date=no" />
+    <title>小宁鸽主页 - 简单且渺小</title>
+    <meta name="keywords" content="小宁鸽主页" />
+    <meta name="description" content="简单且渺小" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="tp-weather-widget"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      ;(function (a, h, g, f, e, d, c, b) {
+        b = function () {
+          d = h.createElement(g)
+          c = h.getElementsByTagName(g)[0]
+          d.src = e
+          d.charset = 'utf-8'
+          d.async = 1
+          c.parentNode.insertBefore(d, c)
+        }
+        a['SeniverseWeatherWidgetObject'] = f
+        a[f] ||
+          (a[f] = function () {
+            ;(a[f].q = a[f].q || []).push(arguments)
+          })
+        a[f].l = +new Date()
+        if (a.attachEvent) {
+          a.attachEvent('onload', b)
+        } else {
+          a.addEventListener('load', b, false)
+        }
+      })(
+        window,
+        document,
+        'script',
+        'SeniverseWeatherWidget',
+        '//cdn.sencdn.com/widget2/static/js/bundle.js?t=' + parseInt((new Date().getTime() / 100000000).toString(), 10)
+      )
+      window.SeniverseWeatherWidget('show', {
+        flavor: 'bubble',
+        location: 'WZS5FY540EQG',
+        geolocation: true,
+        language: 'zh-Hans',
+        unit: 'c',
+        theme: 'auto',
+        token: '7568c24b-3b76-4fa9-8ad2-8f94c53a9fbd',
+        hover: 'enabled',
+        container: 'tp-weather-widget',
+      })
+    </script>
+  </body>
+</html>
