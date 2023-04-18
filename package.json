@@ -13,7 +13,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.0.5",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "less": "^4.1.1",
     "naive-ui": "^2.15.6",
     "vfonts": "^0.1.0",
